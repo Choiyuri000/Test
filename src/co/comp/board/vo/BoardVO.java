@@ -64,8 +64,8 @@ public class BoardVO {
 
 	@Override
 	public String toString() {
-		return "BoardVO [boardId=" + boardId + ", writer=" + writer + ", title=" + title + ", subject=" + subject
-				+ ", enterdate=" + enterdate + ", hit=" + hit + "]";
+		return "ID: " + boardId + "| 작성자: " + writer + " | 제목: " + title + " | 내용: " + subject
+				+ " | 작성일: " + enterdate + " | 조회수: " + hit + "]";
 	}
 
 	

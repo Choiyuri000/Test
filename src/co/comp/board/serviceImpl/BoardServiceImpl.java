@@ -44,7 +44,7 @@ public class BoardServiceImpl extends DAO implements BoardService {
 	public int boardInsert(BoardVO vo) {
 		// TODO 글 쓰기
 		int n = 0;
-		String sql = "insert into board values(?,?,?,?)";
+		String sql = "insert into board(boardid,writer,title,subject) values(?,?,?,?)";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getBoardId());
@@ -74,7 +74,7 @@ public class BoardServiceImpl extends DAO implements BoardService {
 	}
 
 	@Override
-	public int boardId(BoardVO vo) {
+	public BoardVO boardSelect(BoardVO vo) {
 		// 조회수 선택
 		int n = 0;
 		String sql = "select subject from board where boardid = ?";
@@ -89,7 +89,7 @@ public class BoardServiceImpl extends DAO implements BoardService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return n;
+		return vo;
 	}
 	
 	private void hitUpdate(String boardid) {
@@ -103,9 +103,9 @@ public class BoardServiceImpl extends DAO implements BoardService {
 		}
 	}
 
-	@Override
-	public BoardVO boardSelect(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+
+
+
+	
 }

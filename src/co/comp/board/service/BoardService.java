@@ -13,7 +13,9 @@ public interface BoardService {
 	int boardInsert(BoardVO vo); // 글 추가
 
 	int boardDelete(BoardVO vo); // 글 삭제
+
 	
-	int boardId(BoardVO vo); //글조회
+	
+	
 
 }
